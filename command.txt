@@ -1,0 +1,31 @@
+1、建立工作区
+mkdir <dicname>
+git init
+
+2、查看仓库状态
+git status
+
+3、将工作区的修改加入到暂存区
+git add <file>
+
+4、比对修改前后的差异
+git diff
+
+5、将暂存区的修改提交到本地仓库
+git commit -m "comment"
+
+6、查看提交历史，以便回退到历史的某个版本
+git log
+
+7、回退到某个版本
+git reset --hard commit_id(SHA1编号)
+
+8、查看命令历史，以便回到未来的某个版本
+git reflog
+
+9、当需要放弃工作区的修改时
+git checkout -- <file>
+
+10、当需要放弃暂存区的修改时
+git reset HEAD <file>
+git checkout -- <file>
