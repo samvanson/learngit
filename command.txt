@@ -29,3 +29,15 @@ git checkout -- <file>
 10、当需要放弃暂存区的修改时
 git reset HEAD <file>
 git checkout -- <file>
+
+11、搭建远程仓库
+打开Shell（Windows下打开Git Bash），创建SSH Key $ ssh-keygen -t 4096 rsa -C "youremail@example.com"
+登陆GitHub，打开“Account settings”
+点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+使用cat id_rsa.pub显示文件内容
+
+12、登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库
+
+13、将本地的项目上传至远程仓库
+git remote add origin <repo url>
+git push -u origin master
