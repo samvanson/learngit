@@ -62,3 +62,6 @@ git merge <name>
 
 20、删除分支
 git branch -d <name>
+
+21、查看分支合并图
+git log --graph
