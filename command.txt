@@ -44,3 +44,21 @@ git push -u origin master
 
 14、克隆远程库上的项目
 git clone <repo url>
+
+15、查看分支
+git branch
+
+16、创建分支
+git branch <name>
+
+17、切换分支
+git checkout <name>
+
+18、创建+切换分支
+git checkout -b <name>
+
+19、合并某分支到当前分支
+git merge <name>
+
+20、删除分支
+git branch -d <name>
