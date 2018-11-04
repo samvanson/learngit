@@ -65,3 +65,28 @@ git branch -d <name>
 
 21、查看分支合并图
 git log --graph
+
+22、禁用Fast forward，使用--no-ff参数
+git merge --no-ff -m "merge with no-ff"
+
+23、查看分支历史
+git log --graph --pretty=oneline --abbrev-commit
+
+24、在开发新功能的时候遇到产线bug需要修复时的步骤
+1）、将进度进行临时存储
+git stash
+2）、切换到master分支
+git checkout master
+3）、创建并切换到新的分支
+git branch -b issue-100
+4）、提交修改
+git add <file>
+git commit -m "fix bug 100"
+5）、切换到master分支
+git checkout master
+6）、合并issue-100分支的代码到master
+git merge --no-ff -m "merge bug fix 100" issue-100
+7）、切换到dev分支
+git branch dev
+8）、将临时存储的代码回复到工作区
+git stash pop
