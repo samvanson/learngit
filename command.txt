@@ -90,3 +90,25 @@ git merge --no-ff -m "merge bug fix 100" issue-100
 git branch dev
 8）、将临时存储的代码回复到工作区
 git stash pop
+
+25、多人协同开发流程
+1）、查看远程库信息
+git remote -v
+2）、将本地代码推送到远程服务器（若本地的分支不推送到远程，其他人不可见）
+git push origin branch-name
+3）、拉去最新代码
+git pull
+4）、在本地建立与远程对应的分支
+git checkout -b branch-name origin/branch-name
+5）、将本地分支与远程分支进行关联
+git branch --set-upstream branch-name origin/branch-name
+
+26、标签管理
+1）、创建tag（tag标签是版本库的快照）
+git tag tag-name
+2）、删除标签
+git tag -d tag-name
+git push origin :refs/tags/<tag-name>（删除远程标签）
+3）、推送标签
+git push origin tag-name（推送单个）
+git push origin --tags（推送全部）
